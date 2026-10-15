@@ -98,7 +98,7 @@ with gr.Blocks(title="Multimodal Misinformation Detector") as demo:
         Unlike most demo classifiers, the confidence score shown here isn't the model's raw output —
         it's been corrected using **temperature scaling**, a post-hoc calibration technique, because the
         raw fusion model was found to be significantly overconfident (see the
-        [project write-up](https://github.com/YOUR_USERNAME/fakeddit-calibration) for the full analysis).
+        [project write-up](https://github.com/HA-1234/fakeddit-calibration) for the full analysis).
         """
     )
     with gr.Row():
