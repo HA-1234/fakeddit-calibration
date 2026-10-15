@@ -2,7 +2,7 @@
 
 A misinformation classifier for social-media-style posts (caption + image) that goes beyond accuracy to ask a different question: **can the model's confidence in its own predictions actually be trusted?**
 
-**[Live Demo](#)** &nbsp;|&nbsp; **[Companion project: MAMI Misogyny Detector](#)**
+**[Run the demo](#try-it-yourself)** &nbsp;|&nbsp; **[Companion project: MAMI Misogyny Detector](https://github.com/HA-1234/mami-misogyny-detector)**
 
 ---
 
@@ -57,9 +57,18 @@ Four concrete failure cases, investigated with Grad-CAM (adapted for CLIP's Visi
 
 ## Try it yourself
 
-The live demo takes a caption + image and returns a prediction with **calibrated** confidence (not the raw, overconfident score):
+The Gradio demo takes a caption + image and returns a prediction with **calibrated** confidence (not the raw, overconfident score). The trained fusion model and calibration temperature are included in `models/`, so it runs locally with four commands:
 
-**→ [Launch the demo](#)** *(link to be added once deployed)*
+```bash
+git clone https://github.com/HA-1234/fakeddit-calibration.git
+cd fakeddit-calibration
+pip install -r requirements.txt
+python app.py
+```
+
+Then open the local address printed in the terminal (usually `http://127.0.0.1:7860`). The first launch downloads the pretrained RoBERTa and CLIP weights from Hugging Face, so allow a few minutes.
+
+A permanently hosted version is planned but not yet deployed.
 
 ## Project structure & methodology
 
@@ -92,7 +101,7 @@ Each notebook is designed to run on Google Colab's free tier and is fully idempo
 
 ## Related work
 
-This project is a companion piece to [MAMI: Multimodal Misogyny Detection](#), an earlier portfolio project investigating modality disagreement in multimodal classification. Where MAMI found its fusion model was dominated by one modality (CLIP), this project's fusion model shows evidence of genuine multi-modal combination — a useful point of methodological contrast between the two.
+This project is a companion piece to [MAMI: Multimodal Misogyny Detection](https://github.com/HA-1234/mami-misogyny-detector), an earlier portfolio project investigating modality disagreement in multimodal classification. Where MAMI found its fusion model was dominated by one modality (CLIP), this project's fusion model shows evidence of genuine multi-modal combination — a useful point of methodological contrast between the two.
 
 ## License
 
