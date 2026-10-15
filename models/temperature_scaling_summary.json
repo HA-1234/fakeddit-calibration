@@ -1,0 +1,16 @@
+{
+  "temperature": 1.4554,
+  "overall_ece_before": 0.0525,
+  "overall_ece_after": 0.011,
+  "per_class_ece_before": {
+    "Real": 0.0269,
+    "Satire": 0.0899,
+    "Misleading": 0.0959
+  },
+  "per_class_ece_after": {
+    "Real": 0.0403,
+    "Satire": 0.071,
+    "Misleading": 0.0508
+  },
+  "note": "Fitted on validation set; predictions unchanged (verified via assertion above)."
+}
